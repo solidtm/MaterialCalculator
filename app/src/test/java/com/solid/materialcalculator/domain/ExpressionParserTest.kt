@@ -1,6 +1,5 @@
 package com.solid.materialcalculator.domain
 
-import org.junit.Assert.*
 import org.junit.Test
 import com.google.common.truth.Truth.assertThat
 
