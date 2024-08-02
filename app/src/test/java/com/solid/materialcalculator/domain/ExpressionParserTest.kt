@@ -44,6 +44,22 @@ class ExpressionParserTest{
         assertThat(actual).isEqualTo(expected)
     }
 
+    @Test
+    fun `Expression with invalid parentheses throws exception`(){
+        try {
+            parser = ExpressionParser("(}")
+            val actual = parser.parse()
+            val expected = listOf(
+                ExpressionPart.Parentheses(ParenthesesType.Opening),
+                ExpressionPart.Parentheses(ParenthesesType.Closing)
+            )
+            assertThat(actual).isNotEqualTo(expected)
+        }catch (ex: IllegalArgumentException){
+            assertThat(ex.message).isEqualTo("Invalid parentheses type")
+        }
+    }
+
+
     //Homework: Extend the test by adding more complex ones such as:
     //1. Test for expressions with decimal numbers
     //2. Test for expression with multiple nested parentheses
