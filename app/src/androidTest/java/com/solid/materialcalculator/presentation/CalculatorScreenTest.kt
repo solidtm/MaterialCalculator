@@ -28,13 +28,13 @@ class CalculatorScreenTest {
     fun enterExpression_correctResultDisplayed(){
         composeRule.onNodeWithText("1").performClick()
         composeRule.onNodeWithText("+").performClick()
-        composeRule.onNodeWithText("4").performClick()
+        composeRule.onNodeWithText("2").performClick()
         composeRule.onNodeWithText("x").performClick()
         composeRule.onNodeWithText("3").performClick()
         composeRule.onNodeWithText("-").performClick()
         composeRule.onNodeWithText("5").performClick()
         composeRule.onNodeWithText("=").performClick()
 
-        composeRule.onNodeWithText("8.0").assertIsDisplayed()
+        composeRule.onNodeWithText("4.0").assertIsDisplayed()
     }
 }
