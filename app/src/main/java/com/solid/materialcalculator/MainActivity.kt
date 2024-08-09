@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.solid.materialcalculator.presentation.CalculatorScreen
 import com.solid.materialcalculator.ui.theme.MaterialCalculatorTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MaterialCalculatorTheme {
-                CalculatorScreen()
+
             }
         }
     }
